@@ -16,5 +16,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::resource('sales', 'SalesController');
+Route::resource('maintenance', 'maintenanceController');
+Route::resource('finance', 'FinanceController');
+Route::resource('warehouse', 'WarehouseController');
 
 Route::get('/home', 'HomeController@index')->name('home');
