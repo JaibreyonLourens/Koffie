@@ -20,5 +20,7 @@ Route::resource('sales', 'SalesController');
 Route::resource('maintenance', 'maintenanceController');
 Route::resource('finance', 'FinanceController');
 Route::resource('warehouse', 'WarehouseController');
-
+Route::resource('products', 'productsController');
+Route::resource('customer', 'customerController');
+Route::resource('supplies', 'SuppliesController');
 Route::get('/home', 'HomeController@index')->name('home');

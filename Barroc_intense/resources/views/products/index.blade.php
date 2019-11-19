@@ -11,21 +11,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Klant dashbord</h1>
-    <div class="info">
-        <p>Naam</p>
-        <p>Naam</p>
-        <p>Naam</p>
-        <p>Naam</p>
-        <p>Naam</p>
-        <p>Naam</p>
-        <button class="btn btn-block btn-primary">Gegevens aanpassen</button>
-    </div>
-
-    <div class="but">
-        <button class="btn  btn-primary">Geef een storing </button>
-        <button class="btn  btn-primary">Facturen</button>
-        <button class="btn btn-primary">Contract</button>
+    <div class="product">
+    <h1>Product</h1>
+{{--    <button>interesse? vraag een offerte aan</button>--}}
+    <img src="{{URL::asset('/images/bit-deluxe.png')}}" alt="profile Pic" height="200" width="200">
+    <h2>Beschrijven:</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, assumenda at debitis error incidunt ipsam minima pariatur perspiciatis quis velit voluptas voluptatum! Aliquid cum doloremque esse minus nobis ullam, voluptates!</p>
     </div>
 </body>
 </html>
+
