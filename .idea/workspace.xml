@@ -8,11 +8,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/Barroc_intense/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Barroc_intense/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor" />
@@ -27,6 +27,96 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/composer" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/Barroc_intense/vendor/phpoption/phpoption" />
+    </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="672" />
@@ -113,24 +203,20 @@
       <option name="presentableId" value="Default" />
       <updated>1574081284026</updated>
       <workItem from="1574081285654" duration="761000" />
+      <workItem from="1574164870079" duration="505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="761000" />
+    <option name="totallyTimeSpent" value="1266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -138,10 +224,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
