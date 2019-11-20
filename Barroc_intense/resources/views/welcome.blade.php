@@ -18,18 +18,11 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Laravel
+            <img class="welcome-img" src="imgs/logoheer.png" alt="Logo">
         </div>
 
-        <div class="links">
-            <a href="{{route('warehouse.index')}}">maintenance</a>
-            <a href="https://laracasts.com">Laracasts</a>
-            <a href="https://laravel-news.com">News</a>
-            <a href="https://blog.laravel.com">Blog</a>
-            <a href="https://nova.laravel.com">Nova</a>
-            <a href="https://forge.laravel.com">Forge</a>
-            <a href="https://vapor.laravel.com">Vapor</a>
-            <a href="https://github.com/laravel/laravel">GitHub</a>
+        <div class="welcome-text">
+            <h1>Welkom bij de beste koffie leverancier van de benelux!</h1>
         </div>
     </div>
 </div>

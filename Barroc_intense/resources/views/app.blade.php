@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 </head>
 <body>
+
 <div class="container">
     @yield('content')
 </div>
