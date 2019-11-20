@@ -66,7 +66,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: Arial;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -2717,7 +2717,7 @@ textarea.form-control.is-invalid {
 .btn:focus,
 .btn.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+  /*box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);*/
 }
 
 .btn.disabled,
@@ -2731,42 +2731,46 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #3490dc;
-  border-color: #3490dc;
+  color: #000000;
+  background-color: #ffbf00;
+  border-color: #000000;
+    padding: 30px;
+    margin: 20px;
+    height: 100%;
+    width: 100%;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #227dc7;
-  border-color: #2176bd;
+  background-color: #000000;
+  border-color: #ffbf00;
 }
 
-.btn-primary:focus,
-.btn-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
-}
+/*.btn-primary:focus,*/
+/*.btn-primary.focus {*/
+/*  box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);*/
+/*}*/
 
-.btn-primary.disabled,
-.btn-primary:disabled {
-  color: #fff;
-  background-color: #3490dc;
-  border-color: #3490dc;
-}
+/*.btn-primary.disabled,*/
+/*.btn-primary:disabled {*/
+/*  color: #fff;*/
+/*  background-color: #3490dc;*/
+/*  border-color: #3490dc;*/
+/*}*/
 
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: #2176bd;
-  border-color: #1f6fb2;
-}
+/*.btn-primary:not(:disabled):not(.disabled):active,*/
+/*.btn-primary:not(:disabled):not(.disabled).active,*/
+/*.show > .btn-primary.dropdown-toggle {*/
+/*  color: #fff;*/
+/*  background-color: #2176bd;*/
+/*  border-color: #1f6fb2;*/
+/*}*/
 
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.btn-primary:not(:disabled):not(.disabled).active:focus,
-.show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);
-}
+/*.btn-primary:not(:disabled):not(.disabled):active:focus,*/
+/*.btn-primary:not(:disabled):not(.disabled).active:focus,*/
+/*.show > .btn-primary.dropdown-toggle:focus {*/
+/*  box-shadow: 0 0 0 0.2rem rgba(82, 161, 225, 0.5);*/
+/*}*/
 
 .btn-secondary {
   color: #fff;
