@@ -13,7 +13,8 @@ class maintenanceController extends Controller
      */
     public function index()
     {
-        //
+
+        return view('maintenance/index');
     }
 
     /**
@@ -23,7 +24,7 @@ class maintenanceController extends Controller
      */
     public function create()
     {
-        //
+        return view('maintenance/create');
     }
 
     /**
@@ -45,7 +46,7 @@ class maintenanceController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('maintenance.show');
     }
 
     /**
@@ -56,7 +57,7 @@ class maintenanceController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('maintenance.edit');
     }
 
     /**
