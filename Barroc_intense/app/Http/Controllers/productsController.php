@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 
-class SalesController extends Controller
+class productsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +17,8 @@ class SalesController extends Controller
 
     public function index()
     {
-        return view('Sales/index');
+        return view('products/index');
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -51,7 +49,7 @@ class SalesController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('products/show');
     }
 
     /**
