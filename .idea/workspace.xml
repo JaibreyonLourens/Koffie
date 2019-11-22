@@ -31,20 +31,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Barroc_intense/resources/views/layouts/app.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+            <state relative-caret-position="510">
+              <caret line="39" column="75" lean-forward="true" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Barroc_intense/resources/views/products/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            <state relative-caret-position="119">
+              <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Barroc_intense/app/Http/Controllers/maintenanceController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -93,12 +102,13 @@
         <option value="$PROJECT_DIR$/Barroc_intense/routes/web.php" />
         <option value="$PROJECT_DIR$/Barroc_intense/resources/views/products/show.blade.php" />
         <option value="$PROJECT_DIR$/Barroc_intense/resources/views/Sales/show.blade.php" />
-        <option value="$PROJECT_DIR$/Barroc_intense/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/Barroc_intense/public/css/custom.css" />
         <option value="$PROJECT_DIR$/Barroc_intense/resources/views/Sales/offerte.blade.php" />
         <option value="$PROJECT_DIR$/Barroc_intense/resources/views/Sales/index.blade.php" />
         <option value="$PROJECT_DIR$/Barroc_intense/app/Http/Controllers/SalesController.php" />
         <option value="$PROJECT_DIR$/Barroc_intense/resources/views/products/index.blade.php" />
+        <option value="$PROJECT_DIR$/Barroc_intense/app/Http/Controllers/maintenanceController.php" />
+        <option value="$PROJECT_DIR$/Barroc_intense/resources/views/layouts/app.blade.php" />
       </list>
     </option>
   </component>
@@ -219,6 +229,12 @@
               <item name="Koffie" type="b2602c69:ProjectViewProjectNode" />
               <item name="Koffie" type="462c0819:PsiDirectoryNode" />
               <item name="Barroc_intense" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Koffie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Koffie" type="462c0819:PsiDirectoryNode" />
+              <item name="Barroc_intense" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -234,7 +250,7 @@
               <item name="Barroc_intense" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
+              <item name="Maintenance" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -279,12 +295,12 @@
       <updated>1574081284026</updated>
       <workItem from="1574081285654" duration="761000" />
       <workItem from="1574164870079" duration="11768000" />
-      <workItem from="1574424483086" duration="9772000" />
+      <workItem from="1574424483086" duration="10085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25113000" />
+    <option name="totallyTimeSpent" value="25426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -442,13 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Barroc_intense/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Barroc_intense/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -463,10 +472,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Barroc_intense/resources/views/Maintenance/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Barroc_intense/resources/views/products/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        <state relative-caret-position="119">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Barroc_intense/app/Http/Controllers/maintenanceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Barroc_intense/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="75" lean-forward="true" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="75" />
         </state>
       </provider>
     </entry>
