@@ -5,9 +5,29 @@
 h1{
     text-align: center;
     font-family:Roboto;
+}
+.prodcut{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
 
 }
+.products{
+    display: flex;
+    justify-content: space-between;
+}
+.products . a{
+    margin: 2px;
+    padding: 2px;
+}
+.prodcut .btn-info ,.prodcut .input-group-text{
+    margin: 2px;
 
+}
+.search-container {
+    float: right;
+    display: flex;
+}
 .info{
 
     margin: 40px;

@@ -18,6 +18,33 @@
                                     laborum libero minima officia provident quaerat quasi qui quo reiciendis repudiandae
                                     tempora tenetur? Porro?</p>
                             </div>
+                            <hr>
+                            <div class="products">
+                                <a class="nav-link" href="{{ route('products.index') }}">
+                                    <img src="{{URL::asset('/images/bit-deluxe.png')}}" alt="profile Pic" height="90"
+                                         width="90">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                </a>
+
+                                <a href="{{ route('products.index') }}">
+                                    <img src="{{URL::asset('/images/bit-deluxe.png')}}" alt="profile Pic" height="90"
+                                         width="90">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                </a>
+
+                                <a href="{{ route('products.index') }}">
+                                    <img src="{{URL::asset('/images/bit-deluxe.png')}}" alt="profile Pic" height="90"
+                                         width="90">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                </a>
+
+                                <a href="{{ route('products.index') }}">
+                                    <img src="{{URL::asset('/images/bit-deluxe.png')}}" alt="profile Pic" height="90"
+                                         width="90">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                </a>
+
+                            </div>
                         </div>
                     </div>
                 </div>
