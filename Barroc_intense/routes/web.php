@@ -24,4 +24,5 @@ Route::resource('products', 'productsController');
 Route::resource('customer', 'customerController');
 Route::resource('supplies', 'SuppliesController');
 Route::resource('inkoop', 'inkoopController');
+Route::resource('offerte', 'offerteController');
 Route::get('/home', 'HomeController@index')->name('home');
