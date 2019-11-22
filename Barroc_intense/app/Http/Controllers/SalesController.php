@@ -51,7 +51,7 @@ class SalesController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('Sales/show');
     }
 
     /**
