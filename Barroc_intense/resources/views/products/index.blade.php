@@ -5,8 +5,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div id="home-card" class="card">
+                        <div class="card-header"><h1>Product</h1></div>
                         <div class="card-body">
-                            <h1>Product</h1>
                             <div class="home-text">
                                 <img src="{{URL::asset('/images/bit-deluxe.png')}}" alt="profile Pic" height="200" width="200">
                                 <h2>Beschrijven:</h2>
