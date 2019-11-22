@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 
-class productsController extends Controller
+class inkoopController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -11,13 +12,13 @@ class productsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function __construct()
-{
-    $this->middleware('auth');
-}
+    {
+        $this->middleware('auth');
+    }
 
     public function index()
     {
-        return view('products/index');
+        return view('inkoop/index');
     }
 
     /**
@@ -49,7 +50,7 @@ class productsController extends Controller
      */
     public function show($id)
     {
-        return view('products/show');
+        //
     }
 
     /**

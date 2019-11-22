@@ -37,13 +37,14 @@
                     <div class="dropdown hover">
                         <a href="#">Menu Balk</a>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Producten</a></li>
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li><a href="{{ route('products.index') }}">Producten</a></li>
                             <li><a href="#">offerte aanvragen</a></li>
                             <li><a href="#">maintenance</a></li>
-                            <li><a href="{{ url('sales/show.blade.php') }}">sales</a></li>
+                            <li><a href="#">sales</a></li>
                             <li><a href="#">magazijn</a></li>
-                            <li><a href="#">inkoop</a></li>
+                            <li><a href="{{ route('inkoop.index') }}">Inkoop</a></li>
+                            <li><a href="{{ route('customer.index') }}">Dashbord</a></li>
                         </ul>
                     </div>
                 </div>
