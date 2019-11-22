@@ -35,7 +35,7 @@
                 <!-- Left Side Of Navbar -->
                 <div class="navbar-nav mr-auto">
                     <div class="dropdown hover">
-                        <a href="#">Menu</a>
+                        <a href="#">Menu Balk</a>
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Producten</a></li>
