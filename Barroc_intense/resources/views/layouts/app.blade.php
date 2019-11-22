@@ -41,7 +41,7 @@
                             <li><a href="#">Producten</a></li>
                             <li><a href="#">offerte aanvragen</a></li>
                             <li><a href="#">maintenance</a></li>
-                            <li><a href="#">sales</a></li>
+                            <li><a href="{{ url('sales/show.blade.php') }}">sales</a></li>
                             <li><a href="#">magazijn</a></li>
                             <li><a href="#">inkoop</a></li>
                         </ul>
@@ -93,7 +93,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <h6>Wie wij zijn</h6>
-                    <p class="text-justify">BarrocIntens.com <i>CODE WANTS TO BE SIMPLE </i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dicta fuga laboriosam non recusandae reprehenderit. Animi enim eveniet facere iste nemo odio omnis optio perferendis reiciendis repellat reprehenderit, similique?.</p>
+                    <p class="text-justify">BarrocIntens.com <i>:</i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab asperiores dicta fuga laboriosam non recusandae reprehenderit. Animi enim eveniet facere iste nemo odio omnis optio perferendis reiciendis repellat reprehenderit, similique?.</p>
                 </div>
 
                 <div class="col-xs-6 col-md-3">
