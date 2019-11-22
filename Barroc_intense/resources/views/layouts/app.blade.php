@@ -33,9 +33,20 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
-
-                </ul>
+                <div class="navbar-nav mr-auto">
+                    <div class="dropdown hover">
+                        <a href="#">Menu</a>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Producten</a></li>
+                            <li><a href="#">offerte aanvragen</a></li>
+                            <li><a href="#">maintenance</a></li>
+                            <li><a href="#">sales</a></li>
+                            <li><a href="#">magazijn</a></li>
+                            <li><a href="#">inkoop</a></li>
+                        </ul>
+                    </div>
+                </div>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
