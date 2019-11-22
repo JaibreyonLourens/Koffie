@@ -41,7 +41,7 @@
                             <li><a href="#">Producten</a></li>
                             <li><a href="#">offerte aanvragen</a></li>
                             <li><a href="#">maintenance</a></li>
-                            <li><a href="{{ url('sales/show.blade.php') }}">sales</a></li>
+                            <li><a href="{{ route('sales.index') }}">sales</a></li>
                             <li><a href="#">magazijn</a></li>
                             <li><a href="#">inkoop</a></li>
                         </ul>
