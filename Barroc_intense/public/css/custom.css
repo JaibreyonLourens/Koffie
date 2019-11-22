@@ -1,11 +1,10 @@
 *{
-    max-width: 960px;
-    margin: 0 auto;
+    max-width: 100%;
 }
 
 h1{
     text-align: center;
-    font-family:Calibri;
+    font-family:Roboto;
 
 }
 
@@ -37,15 +36,26 @@ h1{
 .welcome-img {
     width: 350px;
     padding: 20px;
+    position: absolute;
+    left: 740px;
+    top: 300px;
+}
+
+.welcome-text {
+    text-align: center;
+    position: absolute;
+    top: 530px;
+    left: 500px;
 }
 
 .site-footer
 {
-    background-color:#26272b;
-    padding:45px 0 20px;
-    font-size:15px;
-    line-height:24px;
-    color:#737373;
+    background-color: #26272b;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+    margin-top: 70px;
 }
 .site-footer hr
 {
@@ -223,4 +233,8 @@ h1{
 
 #home-card {
     padding: 15px;
+}
+
+#nav {
+    max-width: 100%;
 }
