@@ -12,7 +12,7 @@
                             <div class="home-text">
                                 <div class="offerte">
                                 <button class="btn btn-primary">
-                                    <a class="a-link" href="">Offerte aanvragen</a>
+                                    <a class="a-link" href="{{ route('offerte.index') }}">Offerte aanvragen</a>
                                 </button>
                                 <button class="btn btn-primary">
                                     <a class="a-link" href="#">Openstaande offerte</a>
