@@ -40,7 +40,7 @@
                             <li><a href="{{ route('home') }}">Home</a></li>
                             <li><a href="{{ route('products.index') }}">Producten</a></li>
                             <li><a href="#">offerte aanvragen</a></li>
-                            <li><a href="#">maintenance</a></li>
+                            <li><a href="{{ route('maintenance.index') }}">maintenance</a></li>
                             <li><a href="{{ route('sales.index') }}">sales</a></li>
                             <li><a href="#">magazijn</a></li>
                             <li><a href="{{ route('inkoop.index') }}">Inkoop</a></li>
