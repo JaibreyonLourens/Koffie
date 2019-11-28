@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkOrdersTable extends Migration
+class CreateTicketTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,13 @@ class CreateWorkOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('work_orders', function (Blueprint $table) {
+        Schema::create('ticket', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('lease_id');
-            $table->unsignedBigInteger('ticket_id');
-            $table->unsignedBigInteger('supply_id');
-            $table->integer('amount');
-            $table->longText('description');
             $table->timestamps();
-
+            $table->string('ticket_type');
+            $table->longText('description');
 
             $table->foreign('user_id')
                 ->references('id')
@@ -31,15 +28,6 @@ class CreateWorkOrdersTable extends Migration
             $table->foreign('lease_id')
                 ->references('id')
                 ->on('leases');
-
-            $table->foreign('ticket_id')
-                ->references('id')
-                ->on('tickets');
-
-            $table->foreign('supply_id')
-                ->references('id')
-                ->on('supplies');
-
         });
     }
 
@@ -50,6 +38,6 @@ class CreateWorkOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('work_orders');
+        Schema::dropIfExists('ticket');
     }
 }

@@ -6,7 +6,6 @@
                 <div class="card" >
                     <div class="card-header" style="background-color:#ffbf00" >Maintenance Dashboard</div>
                     <div class="card-body row" style="">
-                        <div class="col-md-4" >
                             <h2>Agenda</h2>
 
                             <div class="agenda">
@@ -78,7 +77,7 @@
                                     </table>
                                 </div>
                             </div>
-                        </div>
+
                         </div>
                     </div>
                 </div>
