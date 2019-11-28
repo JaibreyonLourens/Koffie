@@ -15,6 +15,11 @@ class CreateSuppliesTable extends Migration
     {
         Schema::create('supplies', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('ean_nr');
+            $table->string('description');
+            $table->decimal('price_per_unit');
+            $table->integer('in_stock');
             $table->timestamps();
         });
     }

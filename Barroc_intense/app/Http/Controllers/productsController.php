@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Supply;
+use App\Product;
 use Illuminate\Http\Request;
 
 class productsController extends Controller
@@ -11,9 +13,9 @@ class productsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function __construct()
-{
-    $this->middleware('auth');
-}
+    {
+        $this->middleware('auth');
+    }
 
     public function index()
     {
@@ -38,7 +40,16 @@ class productsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Supply::insert([
+            'name' => $request->name,
+            'description' => $request->description,
+            'ean_nr' => $request->ean_nr,
+            'price_per_unit' => $request->price_per_unit,
+            'in_stock' => $request->in_stock
+
+        ]);
+
+        return redirect()->route('products.index');
     }
 
     /**
@@ -47,9 +58,10 @@ class productsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        return view('products/show');
+
+        return view('products/show',['products'=>$product]);
     }
 
     /**

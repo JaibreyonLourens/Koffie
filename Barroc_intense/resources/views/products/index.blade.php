@@ -8,10 +8,12 @@
                         <div class="card-header"><h1>Product</h1></div>
                         <div class="card-body">
                             <div class="home-text">
-                                <img src="{{URL::asset('/images/bit-deluxe.png')}}" alt="profile Pic" height="200" width="200">
+                                <img src="{{URL::asset('/images/bit-deluxe.png')}}" alt="profile Pic" height="200"
+                                     width="200">
                                 <h2>Beschrijven:</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Aperiam, assumenda at debitis error incidunt ipsam minima pariatur perspiciati quis velit voluptas voluptatum!
+                                    Aperiam, assumenda at debitis error incidunt ipsam minima pariatur perspiciati quis
+                                    velit voluptas voluptatum!
                                     Aliquid cum doloremque esse minus nobis ullam, voluptates!</p>
                             </div>
                         </div>

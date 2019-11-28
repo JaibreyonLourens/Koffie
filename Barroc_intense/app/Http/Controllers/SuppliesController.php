@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Category;
+use App\Product;
 use App\Supply;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,17 @@ class SuppliesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        Supply::insert([
+            'name' => $request->name,
+            'description' => $request->description,
+            'ean_nr' => $request->ean_nr,
+            'price_per_unit' => $request->price_per_unit,
+            'in_stock' => $request->in_stock
+
+        ]);
+
+        return redirect()->route('products.index');
     }
 
     /**
@@ -46,7 +57,7 @@ class SuppliesController extends Controller
      */
     public function show(Supply $supply)
     {
-        //
+        return view('products/show',['supplies'=>$supply]);
     }
 
     /**

@@ -20,10 +20,14 @@
                             </div>
                             <hr>
                             <div class="products">
+
+
+
                                 <a class="nav-link" href="{{ route('products.index') }}">
                                     <img src="{{URL::asset('/images/bit-deluxe.png')}}" alt="profile Pic" height="90"
                                          width="90">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <h2>{{ $supplies->name }} </h2>
+                                    <p>Per kilo{{ $supplies->price_per_unit }}</p>
                                 </a>
 
                                 <a href="{{ route('products.index') }}">
