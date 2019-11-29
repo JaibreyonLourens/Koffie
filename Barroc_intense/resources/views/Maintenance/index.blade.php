@@ -8,19 +8,19 @@
                 <div class="card-body row" style="">
                     <div class="col-md-4" >
                         <ul class="list-group" style="max-height:300px; overflow-y: scroll;">
-                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.show', $id = 1)}}" class="text-white">Storing</a></li>
-                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.show',$id = 1)}}" class="text-white">Storing</a></li>
-                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.show', $id = 1)}}" class="text-white">Storing</a></li>
-                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.show', $id = 1)}}" class="text-white">Storing</a></li>
-                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.show', $id = 1)}}" class="text-white">Storing</a></li>
-                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.show', $id = 1)}}" class="text-white">Storing</a></li>
-                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.show', $id = 1)}}" class="text-white">Storing</a></li>
-                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.show', $id = 1)}}" class="text-white">Storing</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit', $id = 1)}}" class="text-white">Storing</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit',$id = 1)}}" class="text-white">Storing</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit', $id = 1)}}" class="text-white">Storing</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit', $id = 1)}}" class="text-white">Storing</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit', $id = 1)}}" class="text-white">Storing</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit', $id = 1)}}" class="text-white">Storing</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit', $id = 1)}}" class="text-white">Storing</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit', $id = 1)}}" class="text-white">Storing</a></li>
                         </ul>
                     </div>
                     <div class="col-md-8">
 
-                            <a href="{{route('maintenance.edit',$id = 1)}}" class="btn btn-dark">Agenda</a>
+                            <a href="{{route('maintenance.show',$id = 1)}}" class="btn btn-dark">Agenda</a>
                             <a href="{{route('maintenance.create')}}" class="btn btn-dark">Storing Opgeven</a>
 
 

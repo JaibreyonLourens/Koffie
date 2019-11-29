@@ -26,8 +26,8 @@
                                 <a class="nav-link" href="{{ route('products.index') }}">
                                     <img src="{{URL::asset('/images/bit-deluxe.png')}}" alt="profile Pic" height="90"
                                          width="90">
-                                    <h2>{{ $supplies->name }} </h2>
-                                    <p>Per kilo{{ $supplies->price_per_unit }}</p>
+                                    <h2></h2>
+                                    <p>Per kilo</p>
                                 </a>
 
                                 <a href="{{ route('products.index') }}">

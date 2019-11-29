@@ -4,34 +4,79 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card" >
-                    <div class="card-header" style="background-color:#ffbf00" >Werkbon Aanmaken</div>
-                    <div class="card-body " style="">
-                        <div class="">
-                            <form class="border border-light p-5">
+                    <div class="card-header" style="background-color:#ffbf00" >Maintenance Dashboard</div>
+                    <div class="card-body row" style="">
+                            <h2>Agenda</h2>
 
+                            <div class="agenda">
+                                <div class="table-responsive">
+                                    <table class="table table-condensed table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Datum</th>
+                                            <th>Tijd</th>
+                                            <th>Type opdracht</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <!-- Single event in a single day -->
+                                        <tr>
+                                            <td class="agenda-date" class="active" rowspan="1">
+                                                <div class="dayofmonth">26</div>
+                                                <div class="dayofweek">Saturday</div>
+                                                <div class="shortdate text-muted">July, 2014</div>
+                                            </td>
+                                            <td class="agenda-time">
+                                                5:30 AM
+                                            </td>
+                                            <td class="agenda-events">
+                                                <div class="agenda-event">
+                                                    <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i> 
+                                                    Routine check
+                                                </div>
+                                            </td>
+                                        </tr>
 
-
-
-                                <label for="textInput">Storing Nummer</label>
-                                <input type="text" id="textInput" class="form-control mb-4" placeholder="Storing Nummer" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
-
-                                <label for="select">Gebruikte producten</label>
-                                <select class="browser-default custom-select mb-4" id="select">
-                                    <option value="" disabled="" selected="">producten</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                </select>
-
-                                <label for="textInput">Aantal gebruikt</label>
-                                <input type="number" id="numberInput" class="form-control mb-4" placeholder="Aantal gebruikt">
-
-
-                                <label for="textarea">Beschrijving </label>
-                                <textarea id="textarea" class="form-control mb-4" placeholder="Beschrijving"></textarea>
-
-                                <button class="btn btn-dark btn-block" type="submit">Werkbon Versturen</button>
-                            </form>
+                                        <!-- Multiple events in a single day (note the rowspan) -->
+                                        <tr>
+                                            <td class="agenda-date" class="active" rowspan="3">
+                                                <div class="dayofmonth">24</div>
+                                                <div class="dayofweek">Thursday</div>
+                                                <div class="shortdate text-muted">July, 2014</div>
+                                            </td>
+                                            <td class="agenda-time">
+                                                8:00 - 9:00 AM
+                                            </td>
+                                            <td class="agenda-events">
+                                                <div class="agenda-event">
+                                                    Storing
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="agenda-time">
+                                                10:15 AM - 12:00 PM
+                                            </td>
+                                            <td class="agenda-events">
+                                                <div class="agenda-event">
+                                                    Storing
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="agenda-time">
+                                                7:00 - 9:00 PM
+                                            </td>
+                                            <td class="agenda-events">
+                                                <div class="agenda-event">
+                                                    Storing
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -39,6 +84,5 @@
             </div>
         </div>
     </div>
-
 
 @endsection

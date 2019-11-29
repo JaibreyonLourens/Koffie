@@ -16,10 +16,9 @@ class CreateWorkOrdersTable extends Migration
         Schema::create('work_orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('lease_id');
-            $table->unsignedBigInteger('ticket_id');
-            $table->unsignedBigInteger('supply_id');
-            $table->integer('amount');
+            $table->unsignedBigInteger('lease_id')->default(null);
+            $table->integer('amount')->default(null);
+            $table->string('type');
             $table->longText('description');
             $table->timestamps();
 
@@ -32,13 +31,8 @@ class CreateWorkOrdersTable extends Migration
                 ->references('id')
                 ->on('leases');
 
-            $table->foreign('ticket_id')
-                ->references('id')
-                ->on('tickets');
 
-            $table->foreign('supply_id')
-                ->references('id')
-                ->on('supplies');
+
 
         });
     }
