@@ -11,39 +11,61 @@ class SuppliesTableSeeder extends Seeder
      */
     public function run()
     {
-        \DB::table('supplies')->insert(
-        [
-            [
-                'name' => 'Espresso Beneficio',
-                'ean_nr' => 'S239KLIUP',
-                'description' => 'Een toegankelijke en zachte koffie.',
-                'price_per_unit' => 21.60,
-                'in_stock' => rand(1, 10)
-            ],
-            [
-                'name' => 'Yellow Bourbon Brasil ',
-                'ean_nr' => 'S239MNKLL',
-                'description' => 'Koffie van de oorspronkelijke koffiestruik (de Bourbon) met gele koffiebessen.',
-                'price_per_unit' => 23.20,
-                'in_stock' => rand(1, 10)
-            ],
-            [
-                'name' => 'Espresso Roma ',
-                'ean_nr' => 'S239IPPSD',
-                'description' => 'Een Italiaanse espresso met een krachtig karakter en een aromatische afdronk',
-                'price_per_unit' => 20.80,
-                'in_stock' => rand(1, 10)
-            ],
-            [
-                'name' => 'Red Honey Honduras',
-                'ean_nr' => 'S239EVVFS ',
-                'description' => 'De koffie is geproduceerd volgens de honey-methode ',
-                'price_per_unit' => 27.80,
-                'in_stock' => rand(1, 10)
-            ]
+        \App\supplies::insert([
+            'name' => 'Rubber (10mm)',
+            'price' => 00.39,
+            'units' => 100,
+            'available' => true
+        ]);
 
+        \App\supplies::insert([
+            'name' => 'Rubber (10mm)',
+            'price' => 00.45,
+            'units' => 0,
+            'available' => false
+        ]);
 
-            ]
-        );
+        \App\supplies::insert([
+            'name' => 'slang',
+            'price' => 4.45,
+            'units' => 10,
+            'available' => true
+        ]);
+
+        \App\supplies::insert([
+            'name' => 'voeding',
+            'price' => 68.69,
+            'units' => 100,
+            'available' => true
+        ]);
+
+        \App\supplies::insert([
+            'name' => 'Ontkalker',
+            'price' => 4,
+            'units' => 100,
+            'available' => true
+        ]);
+
+        \App\supplies::insert([
+            'name' => 'Waterfilter',
+            'price' => 299.45,
+            'units' => 100,
+            'available' => true
+        ]);
+
+        \App\supplies::insert([
+            'name' => 'Reservoir sensor',
+            'price' => 89.99,
+            'units' => 100,
+            'available' => true
+        ]);
+
+        \App\supplies::insert([
+            'name' => 'Druppelstop',
+            'price' =>  122.43,
+            'units' => 100,
+            'available' => true
+        ]);
+
     }
 }

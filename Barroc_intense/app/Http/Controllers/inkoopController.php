@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Supplies;
 use Illuminate\Http\Request;
 
 class inkoopController extends Controller
@@ -18,7 +19,9 @@ class inkoopController extends Controller
 
     public function index()
     {
-        return view('inkoop/index');
+
+        $products = Supplies::all();
+        return view('inkoop/index', ['products' => $products]);
     }
 
     /**
