@@ -9,11 +9,11 @@
                     <div class="card-header" style="background-color:#ffbf00" >Werkbon Aanmaken</div>
                     <div class="card-body " style="">
                         <div class="">
-                            <form action="{{ route('maintenance.store')}}" method="post" class="border border-light p-5">
+                            <form action="{{ route('maintenance.store' )}}" method="post" class="border border-light p-5">
                                 @csrf
 
                                 <p class="h4 mb-4 text-center">Storing</p>
-                                <input type="hidden"  name="user_id" value="{{session('id')}}">
+                                <input type="hidden"  name="user_id" value="{{$id = \Auth::user()->id}}">
 
 
                                 <label for="textInput">Type Storing</label>

@@ -15,8 +15,8 @@ class maintenanceController extends Controller
      */
     public function index()
     {
-
-        return view('maintenance/index');
+        $work_orders = DB::table('work_orders')->get('id');
+        return view('maintenance/index', ['work_orders' => $work_orders]);
     }
 
     /**
@@ -37,7 +37,7 @@ class maintenanceController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+
 
         DB::table('work_orders')->insert([
             'user_id'=> $request->user_id,

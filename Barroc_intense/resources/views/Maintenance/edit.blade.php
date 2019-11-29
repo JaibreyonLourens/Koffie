@@ -11,10 +11,9 @@
                                 @csrf
                                 <label for="select">Gebruikte producten</label>
                                 <select class="browser-default custom-select mb-4" id="select">
-                                    <option value="" disabled="" selected="">producten</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    @foreach()
+
+                                    @endforeach
                                 </select>
 
                                 <label for="textInput">Aantal gebruikt</label>
