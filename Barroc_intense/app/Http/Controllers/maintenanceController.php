@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\work_orders;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class maintenanceController extends Controller
 {
@@ -13,8 +15,8 @@ class maintenanceController extends Controller
      */
     public function index()
     {
-
-        return view('maintenance/index');
+        $work_orders = DB::table('work_orders')->get('id');
+        return view('maintenance/index', ['work_orders' => $work_orders]);
     }
 
     /**
@@ -35,7 +37,15 @@ class maintenanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        DB::table('work_orders')->insert([
+            'user_id'=> $request->user_id,
+            'type' => $request->type,
+            'description' => $request->description
+        ]);
+
+        return view('maintenance/index');
     }
 
     /**
