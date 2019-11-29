@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+route::post('supplies.filter', 'inkoopcontroller@filter')->name('supplies.filter');
 Auth::routes();
 Route::resource('sales', 'SalesController');
 Route::resource('maintenance', 'maintenanceController');
