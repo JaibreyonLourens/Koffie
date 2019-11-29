@@ -17,6 +17,11 @@ class CreateWorkOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('lease_id');
+<<<<<<< Updated upstream
+=======
+            $table->unsignedBigInteger('ticket_id');
+            $table->unsignedBigInteger('supply_id');
+>>>>>>> Stashed changes
             $table->integer('amount');
             $table->longText('description');
             $table->timestamps();
@@ -30,8 +35,18 @@ class CreateWorkOrdersTable extends Migration
                 ->references('id')
                 ->on('leases');
 
+<<<<<<< Updated upstream
 
 
+=======
+            $table->foreign('ticket_id')
+                ->references('id')
+                ->on('tickets');
+
+            $table->foreign('supply_id')
+                ->references('id')
+                ->on('supplies');
+>>>>>>> Stashed changes
 
         });
     }

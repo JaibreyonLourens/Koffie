@@ -15,10 +15,22 @@ class CreateSuppliesTable extends Migration
     {
         Schema::create('supplies', function (Blueprint $table) {
             $table->bigIncrements('id');
+<<<<<<< HEAD
             $table->string('name');
+<<<<<<< Updated upstream
             $table->decimal('price');
             $table->decimal('units');
             $table->boolean('available');
+=======
+            $table->string('ean_nr');
+            $table->string('description');
+            $table->decimal('price_per_unit');
+            $table->integer('in_stock');
+=======
+            $table->string('supply_name');
+            $table->integer('price');
+>>>>>>> master
+>>>>>>> Stashed changes
             $table->timestamps();
         });
     }
