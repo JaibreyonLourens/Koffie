@@ -12,6 +12,10 @@ h1{
 .form input{
     margin: 10px;
 }
+.add{
+    margin-left: -50px;
+    padding-right: 14px;
+}
 .prodcut{
     display: flex;
     margin: 10px;

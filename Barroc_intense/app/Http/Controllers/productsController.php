@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 use App\Supply;
 use App\Product;
+use App\order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class productsController extends Controller
 {
@@ -40,16 +42,23 @@ class productsController extends Controller
      */
     public function store(Request $request)
     {
-        Supply::insert([
-            'name' => $request->name,
-            'description' => $request->description,
-            'ean_nr' => $request->ean_nr,
-            'price_per_unit' => $request->price_per_unit,
-            'in_stock' => $request->in_stock
+//        Supply::insert([
+//            'name' => $request->name,
+//            'description' => $request->description,
+//            'ean_nr' => $request->ean_nr,
+//            'price_per_unit' => $request->price_per_unit,
+//            'in_stock' => $request->in_stock
+//
+//        ]);
+        dd($request);
+        order::insert([
+            'user_id' => Auth::user()->id,
+            'supplies_id' => $request->product,
 
         ]);
 
-        return redirect()->route('products.index');
+
+        return redirect()->route('inkoop.index');
     }
 
     /**

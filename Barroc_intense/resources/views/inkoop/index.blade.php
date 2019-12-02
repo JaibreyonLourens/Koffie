@@ -14,27 +14,44 @@
                                     <th scope="col">Prijs</th>
                                     <th scope="col">Voorraad</th>
                                     <th scope="col">Beschikbaar</th>
+                                    <th scope="col">Toevoge</th>
                                 </tr>
                                 </thead>
                                 <tbody>
+
                                 @foreach($products as $product)
                                     <tr>
                                         <th scope="row">{{$product->id}}</th>
-                                        <td><a href="{{route('inkoop.edit', $product->id)}}">{{$product->name}}</a></td>
-                                        <td>{{$product->price}}</td>
-                                        <td>{{$product->units}}
-                                        </td>
-                                        <td>
-                                            @if($product->available === 1)
-                                                
-                                            @else
-                                                niet beschikbaar
-                                            @endif
-                                        </td>
+                                        <form action="{{route('inkoop.store', ['product' => $product->id])}}" method="post">
+                                            @csrf
+                                            <div class="form-group">
+                                                <td>
+                                                    <a href="{{route('inkoop.edit', $product->id)}}">{{$product->name}}</a>
+                                                </td>
+                                                <td>{{$product->price}}</td>
+                                                <td>{{$product->units}}</td>
+                                                <td>
+                                                    @if($product->available === 1)
+                                                    @else
+                                                        niet beschikbaar
+                                                    @endif
+                                                </td>
+
+                                                <td>
+                                                @if($product->available != 1)
+                                                @else
+                                                    <td>
+                                                        <input class="add" type="submit" value="+">
+                                                    </td>
+                                                @endif
+                                            </div>
+                                        </form>
                                     </tr>
-                            @endforeach
+                                @endforeach
                                 </tbody>
                             </table>
+
+
                         </div>
                     </div>
                 </div>
