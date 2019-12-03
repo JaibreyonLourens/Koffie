@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::post('orders.order', 'orderscontroller@order')->name('orders.order');
+route::post('orders.order', 'orderscontroller@orders')->name('orders.order');
 route::post('supplies.filter', 'inkoopcontroller@filter')->name('supplies.filter');
 Auth::routes();
 Route::resource('sales', 'SalesController');
