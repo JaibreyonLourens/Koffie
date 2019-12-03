@@ -19,7 +19,8 @@ namespace Barroc_Intense
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Form Factuur_Anmaken = new Factuur_Anmaken();
+            Factuur_Anmaken.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)

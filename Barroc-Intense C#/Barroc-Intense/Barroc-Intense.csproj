@@ -53,6 +53,12 @@
     <Compile Include="Facturen.Designer.cs">
       <DependentUpon>Facturen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factuur_Anmaken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factuur_Anmaken.Designer.cs">
+      <DependentUpon>Factuur_Anmaken.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Facturen.resx">
       <DependentUpon>Facturen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factuur_Anmaken.resx">
+      <DependentUpon>Factuur_Anmaken.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
