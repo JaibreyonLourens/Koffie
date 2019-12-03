@@ -17,8 +17,14 @@ class CreateQuotationsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('sales_id');
             $table->unsignedBigInteger('customer_id');
-            $table->timestamps();
 
+            $table->text('content');
+            $table->text('pricing');
+
+            $table->boolean('finance_approved');
+            $table->boolean('customer_approved');
+
+            $table->timestamps();
 
             $table->foreign('sales_id')
                 ->references('id')
