@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Order;
+use App\Supplies;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -17,10 +19,18 @@ class ordersController extends Controller
         $this->middleware('auth');
     }
 
+    public function order( ){
+
+
+    }
+
     public function index()
     {
-
-        return view('Orders/index');
+        $userid = \Auth::id();
+        $user = \App\User::with('orders')->find($userid);
+        $supplies = Supplies::all();
+        return view('Orders/index', ['user' => $user,
+                                           'supplies' => $supplies]);
     }
 
     /**
@@ -41,14 +51,16 @@ class ordersController extends Controller
      */
     public function store(Request $request)
     {
-//        order::insert([
-//            'user_id' => Auth::user()->id,
-//            'supplies_id' => $request->product,
-//
-//        ]);
-//
-//
-//        return redirect()->route('inkoop.index');
+
+        \App\Order::insert([
+           'user_id' => Auth::user()->id,
+           'supplies_id' => $request->product,
+            'created_at' => now(),
+            'updated_at' => now()
+
+       ]);
+
+        return redirect()->route('inkoop.index');
     }
 
     /**

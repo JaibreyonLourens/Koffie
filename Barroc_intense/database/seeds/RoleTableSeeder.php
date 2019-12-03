@@ -11,6 +11,11 @@ class RoleTableSeeder extends Seeder
      */
     public function run()
     {
+        \App\Role::insert([
+            'role' => 'admin',
+            'created_at'    => now(),
+            'updated_at'    => now()
+        ]);
             \App\Role::insert([
                'role' => 'Finance',
                 'created_at'    => now(),
@@ -18,19 +23,30 @@ class RoleTableSeeder extends Seeder
             ]);
 
         \App\Role::insert([
-            'role' => 'Sales',
+            'role' => 'sales',
             'created_at'    => now(),
             'updated_at'    => now()
         ]);
 
         \App\Role::insert([
-            'role' => 'Inkoop',
+            'role' => 'maintenance',
             'created_at'    => now(),
             'updated_at'    => now()
         ]);
 
         \App\Role::insert([
-            'role' => 'Maintenance',
+            'role' => 'head_maintenance',
+            'created_at'    => now(),
+            'updated_at'    => now()
+        ]);
+        \App\Role::insert([
+            'role' => 'inkoop',
+            'created_at'    => now(),
+            'updated_at'    => now()
+        ]);
+
+        \App\Role::insert([
+            'role' => 'Customer',
             'created_at'    => now(),
             'updated_at'    => now()
         ]);
