@@ -16,7 +16,7 @@ class Purchase_rulesTableSeeder extends Seeder
 
         foreach($purchases as $p) {
             for($i = 0; $i < $faker->numberBetween(1, 5); $i++) {
-                \DB::table('purchase_rules')->insert([
+                \DB::table('purchases_rules')->insert([
                     'purchase_id'   => $p->id,
                     'supply_id'     => $faker->numberBetween(1, 8),
                     'created_at'    => $faker->dateTime,

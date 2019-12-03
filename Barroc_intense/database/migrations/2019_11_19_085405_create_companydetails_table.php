@@ -16,6 +16,12 @@ class CreateCompanydetailsTable extends Migration
         Schema::create('companydetails', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
+            $table->string('address');
+            $table->string('city');
+            $table->string("postcode");
+            $table->string('telefoonnummer');
+            $table->string('email');
+
             $table->timestamps();
 
             $table->foreign('user_id')

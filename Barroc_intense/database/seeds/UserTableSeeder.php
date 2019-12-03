@@ -12,7 +12,7 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         \App\User::insert([
-            'role_id'    => 3,
+            'role_id'    => 6,
             'name'=> 'inkoop',
             'email'=> 'inkoop@barroc.nl',
             'password'=> Hash::make('barroc123')
@@ -20,7 +20,7 @@ class UserTableSeeder extends Seeder
         ]);
 
         \App\User::insert([
-            'role_id'    => 2,
+            'role_id'    => 3,
             'name'=> 'sales',
             'email'=> 'sales@barroc.nl',
 
@@ -29,7 +29,7 @@ class UserTableSeeder extends Seeder
         ]);
 
         \App\User::insert([
-            'role_id'    => 4,
+            'role_id'    => 2,
             'name'=> 'finance',
             'email'=> 'finance@barroc.nl',
 
@@ -46,14 +46,22 @@ class UserTableSeeder extends Seeder
         ]);
 
         \App\User::insert([
-            'role_id'  => 3,
+            'role_id'  => 4,
             'name'=> 'maintenance',
             'email'=> 'maintenance@barroc.nl',
             'password'=> Hash::make('barroc123')
 
         ]);
+
         \App\User::insert([
-            'role_id'    => 5,
+            'role_id'  => 5,
+            'name'=> 'piet',
+            'email'=> 'piet@barroc.nl',
+            'password'=> Hash::make('barroc123')
+
+        ]);
+        \App\User::insert([
+            'role_id'    => 7,
             'name'=> 'customer',
             'email'=> 'customer@barroc.nl',
             'password'=> Hash::make('barroc123')
