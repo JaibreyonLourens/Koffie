@@ -13,7 +13,7 @@ class Lease_rulesSeeder extends Seeder
     {
         $faker = \Faker\Factory::create();
         $leases = \App\Lease::all();
-        $supplies = \App\Supply::all();
+        $supplies = \App\Supplies::all();
 
         foreach($leases as $lease)
         {

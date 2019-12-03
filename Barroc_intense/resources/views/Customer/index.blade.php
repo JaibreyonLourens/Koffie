@@ -7,21 +7,20 @@
                 <div class="col-md-8">
                     <div id="home-card" class="card">
                         <div class="card-body">
-                            <h1>Klant dashbord</h1>
+                            <h1>Persoonlijke Informatie</h1>
                             <div class="info">
-                                <p>Naam</p>
-                                <p>Naam</p>
-                                <p>Naam</p>
-                                <p>Naam</p>
-                                <p>Naam</p>
-                                <p>Naam</p>
-                                <button class="btn btn-block btn-primary">Gegevens aanpassen</button>
+                                <p>Username</p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+
+                                <a class="btn btn-block btn-primary" href="#">Gegevens aanpassen</a>
                             </div>
 
                             <div class="but">
-                                <button class="btn  btn-primary">Storing</button>
-                                <button class="btn  btn-primary">Facturen</button>
-                                <button class="btn btn-primary">Contract</button>
+                                <a class="btn  btn-primary" href="#">Storing Melden</a>
+                                <a class="btn btn-primary" href="#">Leasegegevens bekijken</a>
+                                <a class="btn btn-primary" href="#">Contractgegevens bekijken</a>
                             </div>
                         </div>
                     </div>
