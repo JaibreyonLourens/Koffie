@@ -1,0 +1,15 @@
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\bin\Debug\Barroc-Intense.exe.config
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\bin\Debug\Barroc-Intense.exe
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\bin\Debug\Barroc-Intense.pdb
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\bin\Debug\MySql.Data.dll
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\bin\Debug\Google.Protobuf.dll
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\bin\Debug\MySql.Data.xml
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\obj\Debug\Barroc-Intense.csprojAssemblyReference.cache
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\obj\Debug\Barroc_Intense.Facturen.resources
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\obj\Debug\Barroc_Intense.Home.resources
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\obj\Debug\Barroc_Intense.Properties.Resources.resources
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\obj\Debug\Barroc-Intense.csproj.GenerateResource.cache
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\obj\Debug\Barroc-Intense.csproj.CopyComplete
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\obj\Debug\Barroc-Intense.exe
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\obj\Debug\Barroc-Intense.pdb
+C:\xampp\htdocs\Koffie\Barroc-Intense C#\Barroc-Intense\obj\Debug\Barroc_Intense.Factuur_Anmaken.resources

@@ -10,54 +10,78 @@ class UserTableSeeder extends Seeder
      * @return void
      */
     public function run()
+
     {
-        \App\User::insert([
-            'role_id'    => 3,
-            'name'=> 'inkoop',
-            'email'=> 'inkoop@barroc.nl',
-            'password'=> Hash::make('barroc123')
+        $faker = \Faker\Factory::create();
 
+        \DB::table('users')->insert([
+            [
+                'email' => 'admin@barroc.nl',
+                'name'  => 'Admin Medewerker',
+                'password' => Hash::make('barroc123'),
+                'role_id'    => 1,
+                'created_at'    => $faker->dateTime,
+                'updated_at'    => $faker->dateTime
+            ],
+            [
+                'email' => 'inkoop@barroc.nl',
+                'name'  =>  'Inkoop Medewerker',
+                'password' => Hash::make('barroc123'),
+                'role_id'    => 6,
+                'created_at'    => $faker->dateTime,
+                'updated_at'    => $faker->dateTime
+            ],
+            [
+                'email'  => 'sales@barroc.nl',
+                'name'   => 'Sales Medewerker',
+                'password' => Hash::make('barroc123'),
+                'role_id'  => 2,
+                'created_at'    => $faker->dateTime,
+                'updated_at'    => $faker->dateTime
+            ],
+            [
+                'email'  => 'customer@campina.nl',
+                'name'   => 'customer campina',
+                'password' => Hash::make('barroc123'),
+                'role_id'  => 7,
+                'created_at'    => $faker->dateTime,
+                'updated_at'    => $faker->dateTime
+            ],
+            [
+                'email'  => 'customer@curio.nl',
+                'name'   => 'customer curio',
+                'password' => Hash::make('barroc123'),
+                'role_id'  => 7,
+                'created_at'    => $faker->dateTime,
+                'updated_at'    => $faker->dateTime
+            ],
+            [
+                'email'  => 'finance@barroc.nl',
+                'name'   => 'Finance Medewerkers',
+                'password' => Hash::make('barroc123'),
+                'role_id'  => 3,
+                'created_at'    => $faker->dateTime,
+                'updated_at'    => $faker->dateTime
+            ],
+            [
+                'email'  => 'maintenance@barroc.nl',
+                'name'   => 'Maintenance Medewerker',
+                'password' => Hash::make('barroc123'),
+                'role_id'  => 4,
+                'created_at'    => $faker->dateTime,
+                'updated_at'    => $faker->dateTime
+            ]
         ]);
 
-        \App\User::insert([
-            'role_id'    => 2,
-            'name'=> 'sales',
-            'email'=> 'sales@barroc.nl',
-
-            'password'=> Hash::make('barroc123')
-
-        ]);
-
-        \App\User::insert([
-            'role_id'    => 4,
-            'name'=> 'finance',
-            'email'=> 'finance@barroc.nl',
-
-            'password'=> Hash::make('barroc123')
-
-        ]);
-
-        \App\User::insert([
-            'role_id'    => 1,
-            'name'=> 'supplies',
-            'email'=> 'supplies@barroc.nl',
-            'password'=> Hash::make('barroc123')
-
-        ]);
-
-        \App\User::insert([
-            'role_id'  => 3,
-            'name'=> 'maintenance',
-            'email'=> 'maintenance@barroc.nl',
-            'password'=> Hash::make('barroc123')
-
-        ]);
-        \App\User::insert([
-            'role_id'    => 5,
-            'name'=> 'customer',
-            'email'=> 'customer@barroc.nl',
-            'password'=> Hash::make('barroc123')
-
-        ]);
+        for ($i = 0; $i < 100; $i++) {
+            \App\User::insert([
+                'email'         => $faker->safeEmail,
+                'name'          => $faker->name,
+                'password'      => Hash::make('barroc123'),
+                'role_id'       => $faker->numberBetween(2, 7),
+                'created_at'    => $faker->dateTime,
+                'updated_at'    => $faker->dateTime
+            ]);
+        }
     }
 }
