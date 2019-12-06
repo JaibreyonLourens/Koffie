@@ -9,7 +9,7 @@
                         <div class="card-body">
                             <h1>Persoonlijke Informatie</h1>
                             <div class="info">
-                                <p>Username</p>
+                                <p>Username: {{}}</p>
                                 <p></p>
                                 <p></p>
                                 <p></p>
