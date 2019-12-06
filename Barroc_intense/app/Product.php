@@ -10,6 +10,5 @@ class Product extends Model
 
     public function order() {
         return $this->belongsTo('\App\Users', 'user_id');
-        return $this->belongsTo('\App\Supplies', 'Supplies_id');
     }
 }
