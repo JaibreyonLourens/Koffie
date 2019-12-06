@@ -52,7 +52,7 @@ namespace Barroc_Intense
 
             try
             {
-                MySqlCommand allsupplies = new MySqlCommand("SELECT name FROM supplies", connection);
+                MySqlCommand allsupplies = new MySqlCommand("SELECT * FROM supplies where available > 0 ", connection);
                 using (MySqlDataReader reader = allsupplies.ExecuteReader())
                 {
                   
@@ -60,7 +60,7 @@ namespace Barroc_Intense
                     {
                         while (reader.Read())
                         {
-                            string suppliesName = (string)reader.GetValue(0);
+                            string suppliesName = reader[1].ToString();
 
                             productComboBox.Items.Add(suppliesName);
                         }
@@ -105,8 +105,8 @@ namespace Barroc_Intense
             MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;Database=testbarroc;Uid=root;Pwd=;");
             connection.Open();
 
-            /* string id = productComboBox.SelectedItem.ToString();*/
-            MySqlCommand allUsersCommand = new MySqlCommand("SELECT  price FROM supplies", connection);
+            string id = productComboBox.SelectedItem.ToString();
+            MySqlCommand allUsersCommand = new MySqlCommand("SELECT  * FROM supplies", connection);
 
             using (MySqlDataReader reader = allUsersCommand.ExecuteReader())
             {
@@ -116,7 +116,13 @@ namespace Barroc_Intense
 
                     while (reader.Read())
                     {
-                        prijslabel.Text = "$" + allUsersCommand.ToString();
+                        
+                        //decimal itemvalue = (decimal)reader[2];
+                        prijslabel.Text = "€" + reader[2].ToString();
+                        if(numericUpDown1.Value > 0)
+                        {
+                            prijslabel.Text = "€" + (decimal)reader[2] * numericUpDown1.Value;
+                        }
                     }
                 }
                 else

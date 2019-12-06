@@ -39,7 +39,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.prijslabel = new System.Windows.Forms.Label();
             this.makeButton = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +91,11 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(127, 108);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(199, 20);
             this.numericUpDown1.TabIndex = 8;
@@ -146,21 +150,11 @@
             this.makeButton.UseVisualStyleBackColor = true;
             this.makeButton.Click += new System.EventHandler(this.makeButton_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(171, 187);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "€";
-            // 
             // Factuur_Anmaken
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 308);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.makeButton);
             this.Controls.Add(this.prijslabel);
             this.Controls.Add(this.dateTimePicker1);
@@ -193,6 +187,5 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label prijslabel;
         private System.Windows.Forms.Button makeButton;
-        private System.Windows.Forms.Label label7;
     }
 }
