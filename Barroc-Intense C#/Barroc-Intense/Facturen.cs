@@ -19,41 +19,74 @@ namespace Barroc_Intense
             MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;Database=testbarroc;Uid=root;Pwd=;");
             connection.Open();
 
-            try
-            {
-                MySqlCommand allsupplies = new MySqlCommand("SELECT name, price FROM supplies", connection);
-                using (MySqlDataReader reader = allsupplies.ExecuteReader())
-                {
-                    Console.WriteLine(reader.FieldCount);
-                    if (reader.HasRows)
-                    {
-                        Console.WriteLine("1.");
+            //try
+            //{
 
-                        while (reader.Read())
-                        {
-                            string employeesName = (string)reader.GetValue(0);
+            //    //DataSet ds = new DataSet();
+            //    //string Users_query = "SELECT * FROM `invoices";
+            //    //MySqlDataAdapter users_da = new MySqlDataAdapter(Users_query, connection);
 
-                            Console.WriteLine(employeesName);
+            //    //users_da.Fill(ds, "users");
+            //    //listView1.DisplayMember = "name";
+            //    //listView1.ValueMember = "id";
+            //    //dataGridView1.DataSource = ds.Tables["users"];
 
-                            supplieslistBox.Items.Add(employeesName);
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("2.");
-                    }
 
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+
+
+
+            //    MySqlCommand allinvoices = new MySqlCommand("SELECT users.name,supplies.name, antaal, total, betaald_op FROM invoices INNER JOIN users ON users.id=invoices.user_id INNER JOIN supplies ON supplies.id=invoices.supply_id", connection);
+            //    using (MySqlDataReader reader = allinvoices.ExecuteReader())
+            //    {
+            //        Console.WriteLine(reader.FieldCount);
+            //        if (reader.HasRows)
+            //        {
+            //            while (reader.Read())
+            //            {
+
+            //                string userName = (string)reader.GetValue(0);
+            //                string supplieyName = (string)reader.GetValue(1);
+                            //decimal antaal = (decimal)reader.GetValue(2);
+                            //double total = (double)reader.GetValue(3);
+                            //string betaald_op = (string)reader.GetValue(4);
+
+            //                string[] row = { userName, supplieyName };
+            //                var listViewItem = new ListViewItem(row);
+            //                dataGridView1.Rows.Add(listViewItem);
+
+
+            //            }
+            //        }
+
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string connStr = "server=localhost;user=root;database=testbarroc;port=3306;password=";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            conn.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SELECT users.name,supplies.name, antaal, total, betaald_op FROM invoices INNER JOIN users ON users.id=invoices.user_id INNER JOIN supplies ON supplies.id=invoices.supply_id", conn);
+            MySqlDataReader dr = cmd.ExecuteReader();
+
+            dataGridView1.Rows.Add(dr);
         }
     }
 }

@@ -15,14 +15,23 @@ class CreateInvoicesTable extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('lease_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('supply_id');
+            $table->integer('antaal');
+            $table->integer('total');
             $table->date('betaald_op')->nullable();
+//            $table->dateTime('created_at');
+
 
             $table->timestamps();
 
-            $table->foreign('lease_id')
+            $table->foreign('user_id')
                 ->references('id')
-                ->on('leases');
+                ->on('users');
+
+            $table->foreign('supply_id')
+                ->references('id')
+                ->on('supplies');
         });
     }
 
