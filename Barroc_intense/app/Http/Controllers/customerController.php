@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class customerController extends Controller
 {
@@ -19,7 +20,15 @@ class customerController extends Controller
     public function index()
     {
 
-        return view('Customer/index');
+        #$leases_all = Lease::all();
+        $user = Auth::User();
+
+
+
+
+
+        return view('Customer/index', ['user' => $user]);
+
     }
 
     /**

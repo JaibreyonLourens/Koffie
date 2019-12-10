@@ -11,9 +11,7 @@
                                 @csrf
                                 <label for="select">Gebruikte producten</label>
                                 <select class="browser-default custom-select mb-4" id="select">
-                                    @foreach()
 
-                                    @endforeach
                                 </select>
 
                                 <label for="textInput">Aantal gebruikt</label>

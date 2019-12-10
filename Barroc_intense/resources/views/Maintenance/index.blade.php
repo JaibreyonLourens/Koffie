@@ -8,8 +8,8 @@
                 <div class="card-body row" style="">
                     <div class="col-md-4" >
                         <ul class="list-group" style="max-height:300px; overflow-y: scroll;">
-                            @foreach( $work_orders as $work_order)
-                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit', $work_order['id'])}}" class="text-white">Storing</a></li>
+                        @foreach($workorders as $workorder)
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit', $id = $workorder->id)}}" class="text-white">Storing</a></li>
                             @endforeach
                         </ul>
                     </div>
