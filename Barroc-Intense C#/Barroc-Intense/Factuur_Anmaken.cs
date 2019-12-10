@@ -25,7 +25,7 @@ namespace Barroc_Intense
                 //new code
 
                 DataSet ds = new DataSet();
-                string Users_query = "SELECT id, name FROM users";
+                string Users_query = "SELECT id, name FROM users WHERE users.role_id = 7";
                 MySqlDataAdapter users_da = new MySqlDataAdapter(Users_query, connection);
 
                 users_da.Fill(ds, "users");
@@ -35,13 +35,13 @@ namespace Barroc_Intense
 
 
 
-                string product_query = "SELECT id, name, price FROM supplies where available > 0 ";
+                string product_query = "SELECT id, name, price_per_unit FROM products where in_stock > 0 ";
                 MySqlDataAdapter product_da = new MySqlDataAdapter(product_query, connection);
 
-                product_da.Fill(ds, "supplies");
+                product_da.Fill(ds, "products");
                 productComboBox.DisplayMember = "name";
                 productComboBox.ValueMember = "id";
-                productComboBox.DataSource = ds.Tables["supplies"];
+                productComboBox.DataSource = ds.Tables["products"];
 
                 CalculatePrice(Convert.ToInt32(productComboBox.SelectedValue), Convert.ToInt32(numericUpDown1.Value));
             }
@@ -113,7 +113,7 @@ namespace Barroc_Intense
             MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;Database=testbarroc;Uid=root;Pwd=;");
             connection.Open();
 
-            MySqlCommand allUsersCommand = new MySqlCommand("SELECT price FROM supplies where id = " + product_id + ";", connection);
+            MySqlCommand allUsersCommand = new MySqlCommand("SELECT price_per_unit FROM products where id = " + product_id + ";", connection);
 
             using (MySqlDataReader reader = allUsersCommand.ExecuteReader())
             {

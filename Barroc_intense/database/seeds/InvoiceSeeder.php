@@ -13,6 +13,8 @@ class InvoiceSeeder extends Seeder
     {
 //        $faker = \Faker\Factory::create();
 //        $leases = \App\Lease::all();
+//        $supply =\App\Supplies::all();
+//        $user = \App\User::all();
 //
 //        foreach($leases as $lease)
 //        {
@@ -21,6 +23,9 @@ class InvoiceSeeder extends Seeder
 //                \DB::table('invoices')->insert([
 //                    [
 //                        'lease_id'      => $lease->id,
+////                        'user_id'      => $user->id,
+////                        'supply_id'      => $supply->id,
+////                        'antal' => $faker->
 //                        'betaald_op'    => $faker->boolean ? $faker->dateTime : null,
 //                        'created_at'    => now(),
 //                        'updated_at'    => now()

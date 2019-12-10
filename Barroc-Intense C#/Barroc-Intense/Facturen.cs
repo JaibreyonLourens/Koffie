@@ -19,74 +19,88 @@ namespace Barroc_Intense
             MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;Database=testbarroc;Uid=root;Pwd=;");
             connection.Open();
 
-            //try
-            //{
+            try
+            {
 
-            //    //DataSet ds = new DataSet();
-            //    //string Users_query = "SELECT * FROM `invoices";
-            //    //MySqlDataAdapter users_da = new MySqlDataAdapter(Users_query, connection);
+                //    DataSet ds = new DataSet();
+                //    string Users_query = "SELECT invoices.id,users.name,supplies.name, antaal, total, betaald_op FROM invoices INNER JOIN users ON users.id=invoices.user_id INNER JOIN supplies ON supplies.id=invoices.supply_id";
+                //    MySqlDataAdapter users_da = new MySqlDataAdapter(Users_query, connection);
 
-            //    //users_da.Fill(ds, "users");
-            //    //listView1.DisplayMember = "name";
-            //    //listView1.ValueMember = "id";
-            //    //dataGridView1.DataSource = ds.Tables["users"];
+                //    users_da.Fill(ds, "invoices");
 
 
+                //    dataGridView1.Rows.Add("invoices");
+                //}
+
+                MySqlCommand allinvoices = new MySqlCommand("SELECT invoices.id,users.name,supplies.name, antaal, total, betaald_op FROM invoices INNER JOIN users ON users.id=invoices.user_id INNER JOIN supplies ON supplies.id=invoices.supply_id", connection);
+                using (MySqlDataReader reader = allinvoices.ExecuteReader())
+                {
+                    Console.WriteLine(reader.FieldCount);
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            int id = Convert.ToInt32(reader.GetValue(0));
+                            string userName = (string)reader.GetValue(1);
+                            string supplieyName = (string)reader.GetValue(2);
+                            int antaal = Convert.ToInt32(reader.GetValue(3));
+                            Double Price = Convert.ToDouble(reader.GetValue(4));
+
+                            string betaald_op;
+                            if (!reader.IsDBNull(5))
+                            {
+                                betaald_op = "betaald";
+                            }
+                            else
+                            {
+                                betaald_op = " nog niet betaald";
+                            }
+
+                            dataGridView1.Rows.Add(id, userName, supplieyName, antaal, Price, betaald_op);
 
 
+                        }
+                    }
 
-
-            //    MySqlCommand allinvoices = new MySqlCommand("SELECT users.name,supplies.name, antaal, total, betaald_op FROM invoices INNER JOIN users ON users.id=invoices.user_id INNER JOIN supplies ON supplies.id=invoices.supply_id", connection);
-            //    using (MySqlDataReader reader = allinvoices.ExecuteReader())
-            //    {
-            //        Console.WriteLine(reader.FieldCount);
-            //        if (reader.HasRows)
-            //        {
-            //            while (reader.Read())
-            //            {
-
-            //                string userName = (string)reader.GetValue(0);
-            //                string supplieyName = (string)reader.GetValue(1);
-                            //decimal antaal = (decimal)reader.GetValue(2);
-                            //double total = (double)reader.GetValue(3);
-                            //string betaald_op = (string)reader.GetValue(4);
-
-            //                string[] row = { userName, supplieyName };
-            //                var listViewItem = new ListViewItem(row);
-            //                dataGridView1.Rows.Add(listViewItem);
-
-
-            //            }
-            //        }
-
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void betalenButton_Click(object sender, EventArgs e)
         {
 
-        }
+            try
+            {
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+                DateTime StartDate = dateTimePicker.Value;
+                DateTime StartTimeCombined = new DateTime(StartDate.Year, StartDate.Month, StartDate.Day);
 
-        }
+                int id = (int) dataGridView1.SelectedRows[0].Cells[0].Value;
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            string connStr = "server=localhost;user=root;database=testbarroc;port=3306;password=";
-            MySqlConnection conn = new MySqlConnection(connStr);
-            conn.Open();
+                string connectionString = "Server=localhost; Database=testbarroc; Uid=root; Pwd=;";
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
 
-            MySqlCommand cmd = new MySqlCommand("SELECT users.name,supplies.name, antaal, total, betaald_op FROM invoices INNER JOIN users ON users.id=invoices.user_id INNER JOIN supplies ON supplies.id=invoices.supply_id", conn);
-            MySqlDataReader dr = cmd.ExecuteReader();
+                MySqlCommand cmd = new MySqlCommand(connectionString, connection);
+                cmd.CommandText = "Update invoices set betaald_op= " +
+                                        "@betaald_op WHERE id = @id";
+                cmd.Prepare();
 
-            dataGridView1.Rows.Add(dr);
+                cmd.Parameters.AddWithValue("@betaald_op", StartDate);
+                cmd.Parameters.AddWithValue("@id", id);
+                //cmd.Parameters.AddWithValue("@betaald_op", "01/01/2019");
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
