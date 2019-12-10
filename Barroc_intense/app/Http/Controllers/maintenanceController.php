@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\work_orders;
+use App\work_order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,8 +15,9 @@ class maintenanceController extends Controller
      */
     public function index()
     {
-        $work_orders = DB::table('work_orders')->get('id');
-        return view('maintenance/index', ['work_orders' => $work_orders]);
+        $workorders = work_order::All();
+
+        return view('maintenance/index', ['workorders' => $workorders]);
     }
 
     /**
@@ -40,21 +41,20 @@ class maintenanceController extends Controller
 
 
         DB::table('work_orders')->insert([
-            'user_id'=> $request->user_id,
-            'type' => $request->type,
-            'description' => $request->description
+            'user_id' => $request->user_id,
+            'description' => $request->description,
+            'amount' => 0
         ]);
-
-        return view('maintenance/index');
+        $workorders = work_order::All();
+        return view('maintenance.index', ['workorders' => $workorders]);
     }
-
     /**
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         return view('maintenance.show');
     }
@@ -67,7 +67,9 @@ class maintenanceController extends Controller
      */
     public function edit($id)
     {
-        return view('maintenance.edit');
+        $work_order = work_order::find($id);
+
+        return view('maintenance.edit', ['workorder' => $work_order]);
     }
 
     /**
@@ -79,7 +81,12 @@ class maintenanceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $work_order = work_order::find($id);
+
+        $work_order->update([
+            'name' => $request->name,
+            'price' => $request->price,
+            'categories_id' => $request->categorie_id
     }
 
     /**
