@@ -19,17 +19,34 @@ class ordersController extends Controller
         $this->middleware('auth');
     }
 
-    public function order( ){
-
+    public function order(Request $request){
+        $userid = \Auth::id();
+        $user = \App\User::with('orders', 'orders.supply')->find($userid);
+            
 
     }
 
     public function index()
     {
         $userid = \Auth::id();
-        $user = \App\User::with('orders')->find($userid);
+        $user = \App\User::with('orders', 'orders.supply')->find($userid);
+        $orders = $user->orders;
+
+
+
         $supplies = Supplies::all();
+        $price = 0;
+
+      foreach ($orders as $order){
+
+                $price = $price+ $order->supply->price;
+
+
+        }
+      $total = $price;
+           // DD($total);
         return view('Orders/index', ['user' => $user,
+                                           'total' => $total,
                                            'supplies' => $supplies]);
     }
 
@@ -55,6 +72,7 @@ class ordersController extends Controller
         \App\Order::insert([
            'user_id' => Auth::user()->id,
            'supplies_id' => $request->product,
+            'is_completed' => 0,
             'created_at' => now(),
             'updated_at' => now()
 

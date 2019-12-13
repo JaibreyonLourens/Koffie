@@ -17,8 +17,10 @@ namespace Barroc_Intense
         public Factuur_Anmaken()
         {
             InitializeComponent();
-            MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;Database=testbarroc;Uid=root;Pwd=;");
+            MySqlConnection connection = new MySqlConnection("Server=127.0.0.1;Database=barroc_intense;Uid=root;Pwd=;");
             connection.Open();
+           
+            
 
             try
             {
