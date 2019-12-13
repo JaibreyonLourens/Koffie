@@ -15,11 +15,11 @@
                                 </select>
 
                                 <label for="textInput">Aantal gebruikt</label>
-                                <input type="number" id="numberInput" class="form-control mb-4" placeholder="Aantal gebruikt">
+                                <input type="number" name="amount" id="numberInput" class="form-control mb-4" placeholder="Aantal gebruikt">
 
 
                                 <label for="textarea">Beschrijving </label>
-                                <textarea id="textarea" class="form-control mb-4" placeholder="Beschrijving"></textarea>
+                                <textarea id="textarea" name="description" class="form-control mb-4" placeholder="Beschrijving"></textarea>
 
                                 <button class="btn btn-dark btn-block" type="submit">Werkbon Versturen</button>
                             </form>

@@ -84,9 +84,12 @@ class maintenanceController extends Controller
         $work_order = work_order::find($id);
 
         $work_order->update([
-            'name' => $request->name,
-            'price' => $request->price,
-            'categories_id' => $request->categorie_id
+            'amount' => $request->amount,
+            'description' => $request->description]);
+
+        $workorders = work_order::All();
+        return redirect()->route('maintenance.index', );
+
     }
 
     /**
