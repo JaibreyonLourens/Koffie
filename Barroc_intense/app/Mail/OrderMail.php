@@ -2,6 +2,8 @@
 
 namespace App\Mail;
 
+use http\Client\Curl\User;
+
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -16,9 +18,11 @@ class OrderMail extends Mailable
      *
      * @param $supplynames
      */
-    public function __construct($supplynames)
+    public function __construct($user)
     {
-        $this->supplynames = $supplynames;
+
+        $this->user = $user;
+
     }
 
     /**
@@ -28,6 +32,7 @@ class OrderMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.order');
+        dd($this->user);
+        return $this->markdown('mail.order.succesfull')->with('user', $this->user);
     }
 }
