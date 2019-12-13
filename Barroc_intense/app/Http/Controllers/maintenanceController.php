@@ -81,6 +81,7 @@ class maintenanceController extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $work_order = work_order::find($id);
 
         $work_order->update([
@@ -88,7 +89,7 @@ class maintenanceController extends Controller
             'description' => $request->description]);
 
         $workorders = work_order::All();
-        return redirect()->route('maintenance.index', );
+        return redirect()->route('maintenance.index');
 
     }
 

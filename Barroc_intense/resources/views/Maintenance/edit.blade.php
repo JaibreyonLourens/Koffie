@@ -7,21 +7,23 @@
                     <div class="card-header" style="background-color:#ffbf00" >Werkbon</div>
                     <div class="card-body " style="">
                         <div class="">
-                            <form class="border border-light p-5">
+                            <form action="{{route('maintenance.update', $workorder->id)}}" method="post" class="border border-light p-5">
+                                @method('PUT')s
                                 @csrf
+
+                                <p>{{$workorder}}</p>
                                 <label for="select">Gebruikte producten</label>
                                 <select class="browser-default custom-select mb-4" id="select">
 
                                 </select>
 
                                 <label for="textInput">Aantal gebruikt</label>
-                                <input type="number" name="amount" id="numberInput" class="form-control mb-4" placeholder="Aantal gebruikt">
+                                <input type="number" name="amount" id="numberInput" class="form-control mb-4" placeholder="{{$workorder->amount}}">
 
 
                                 <label for="textarea">Beschrijving </label>
-                                <textarea id="textarea" name="description" class="form-control mb-4" placeholder="Beschrijving"></textarea>
-
-                                <button class="btn btn-dark btn-block" type="submit">Werkbon Versturen</button>
+                                <textarea id="textarea" name="description" class="form-control mb-4" placeholder="{{$workorder->description}}"></textarea>
+                                <input type="submit" value="Send">
                             </form>
 
                         </div>
