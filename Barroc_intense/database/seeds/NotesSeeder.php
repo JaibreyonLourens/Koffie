@@ -22,8 +22,8 @@ class NotesSeeder extends Seeder
                         'sales_id'      => 3,
                         'customer_id'   => $sales->random()->id,
                         'content'       => $faker->text,
-                        'created_at'    => $faker->dateTime,
-                        'updated_at'    => $faker->dateTime
+                        'created_at'    => now(),
+                        'updated_at'    => now()
                     ]
                 ]);
             }

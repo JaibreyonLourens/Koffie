@@ -22,7 +22,17 @@ class ordersController extends Controller
     public function order(Request $request){
         $userid = \Auth::id();
         $user = \App\User::with('orders', 'orders.supply')->find($userid);
-            
+        $orders = $user->orders;
+        $amount = $orders->count('supplies_id');
+
+        \App\Supplies::insert([
+            'units' =>$amount,
+
+            ]);
+
+        \App\Order::insert([
+           'is_completed' => 1
+        ])->where('id' == $userid);
 
     }
 

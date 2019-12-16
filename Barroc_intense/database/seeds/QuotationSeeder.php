@@ -25,8 +25,8 @@ class QuotationSeeder extends Seeder
                         'pricing'           => $faker->numerify("Installatiekosten ###,- & leasekosten maandelijks á ###,-"),
                         'finance_approved'  => $faker->boolean,
                         'customer_approved' => $faker->boolean,
-                        'created_at'        => $faker->dateTime,
-                        'updated_at'        => $faker->dateTime,
+                        'created_at'        => now(),
+                        'updated_at'        => now(),
                     ]
                 ]);
             }

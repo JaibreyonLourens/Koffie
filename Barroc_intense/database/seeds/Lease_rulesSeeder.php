@@ -23,8 +23,8 @@ class Lease_rulesSeeder extends Seeder
                     [
                         'lease_id'  => $lease->id,
                         'supply_id' => $supplies->random()->id,
-                        'created_at'    => $faker->dateTime,
-                        'updated_at'    => $faker->dateTime
+                        'created_at'    => now(),
+                        'updated_at'    => now()
                     ]
                 ]);
 

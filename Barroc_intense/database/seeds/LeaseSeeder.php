@@ -24,8 +24,8 @@ class LeaseSeeder extends Seeder
                     'monthly_costs' => $faker->randomFloat(2, 1000, 1000000),
                     'start_date'    => $faker->dateTimeBetween('-10 years', 'now'),
                     'end_date'      => $faker->dateTimeBetween('now', '+10 years'),
-                    'created_at'    => $faker->dateTime,
-                    'updated_at'    => $faker->dateTime
+                    'created_at'    =>now(),
+                    'updated_at'    =>now()
                 ]);
             }
         }
