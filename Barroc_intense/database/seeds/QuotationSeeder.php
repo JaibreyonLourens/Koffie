@@ -16,7 +16,7 @@ class QuotationSeeder extends Seeder
         $sales = \App\User::where('role_id', 2)->get();
 
         foreach($customers as $user) {
-            for($i = 0; $i < $faker->numberBetween(1, 3); $i++) {
+            for($i = 0; $i < $faker->numberBetween(10, 30); $i++) {
                 \DB::table('quotations')->insert([
                     [
                         'sales_id'          => $sales->random()->id,

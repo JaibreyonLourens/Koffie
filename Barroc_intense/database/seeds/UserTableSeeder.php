@@ -73,7 +73,7 @@ class UserTableSeeder extends Seeder
             ]
         ]);
 
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 500; $i++) {
             \App\User::insert([
                 'email'         => $faker->safeEmail,
                 'name'          => $faker->name,

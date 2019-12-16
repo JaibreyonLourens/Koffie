@@ -17,7 +17,7 @@ class Lease_rulesSeeder extends Seeder
 
         foreach($leases as $lease)
         {
-            for($i = 0; $i < $faker->numberBetween(1, 5); $i++)
+            for($i = 0; $i < $faker->numberBetween(10, 30); $i++)
             {
                 \DB::table('lease_rules')->insert([
                     [
