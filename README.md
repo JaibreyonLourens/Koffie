@@ -7,7 +7,7 @@ composer install
 
 copy .env.example and rename to .env
 
-database aanmaken
+make a new database 
 
 add your personal (database) data to .env
 php artisan key:generate
