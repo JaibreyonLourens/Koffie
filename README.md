@@ -5,7 +5,7 @@ in the project folder:
 
 composer install
 
-copy .env.example and rename to .env0
+copy .env.example and rename to .env
 
 database aanmaken
 
@@ -14,4 +14,4 @@ php artisan key:generate
 
 php artisan migrate:fresh --seed
 
-if you get a date related errors just retry the migration 
+if you get a date related error just retry the migration 
