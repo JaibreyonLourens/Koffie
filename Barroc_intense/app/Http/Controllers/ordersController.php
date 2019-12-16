@@ -25,12 +25,7 @@ class ordersController extends Controller
         $orders = $user->orders;
         $amount = $orders->count('supplies_id');
 
-        \App\Supplies::insert([
-            'units' =>$amount,
-
-            ]);
-
-        \App\Order::insert([
+        \App\Order::update([
            'is_completed' => 1
         ])->where('id' == $userid);
 

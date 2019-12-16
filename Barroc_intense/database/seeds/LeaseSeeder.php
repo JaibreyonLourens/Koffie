@@ -16,7 +16,7 @@ class LeaseSeeder extends Seeder
         $finances = \App\User::where('role_id', 3)->get();
 
         foreach($customers as $user) {
-            for($i = 0; $i < $faker->numberBetween(10, 30); $i++) {
+            for($i = 0; $i < $faker->numberBetween(2, 3); $i++) {
                 \DB::table('leases')->insert([
                     'lease_type_id' => $faker->numberBetween(1, 2),
                     'customer_id'   => $user->id,
