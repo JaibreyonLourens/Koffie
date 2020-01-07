@@ -33,8 +33,7 @@
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Naam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supliesName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.antaal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.betaald = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -46,20 +45,19 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.Naam,
-            this.supliesName,
-            this.antaal,
+            this.Type,
             this.total,
             this.betaald});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(548, 321);
+            this.dataGridView1.Size = new System.Drawing.Size(443, 321);
             this.dataGridView1.TabIndex = 1;
             // 
             // betalenButton
             // 
-            this.betalenButton.Location = new System.Drawing.Point(582, 138);
+            this.betalenButton.Location = new System.Drawing.Point(479, 142);
             this.betalenButton.Name = "betalenButton";
             this.betalenButton.Size = new System.Drawing.Size(199, 100);
             this.betalenButton.TabIndex = 2;
@@ -69,7 +67,7 @@
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(581, 67);
+            this.dateTimePicker.Location = new System.Drawing.Point(478, 71);
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker.TabIndex = 3;
@@ -86,15 +84,10 @@
             this.Naam.HeaderText = "Naam";
             this.Naam.Name = "Naam";
             // 
-            // supliesName
+            // Type
             // 
-            this.supliesName.HeaderText = "Product";
-            this.supliesName.Name = "supliesName";
-            // 
-            // antaal
-            // 
-            this.antaal.HeaderText = "Antaal";
-            this.antaal.Name = "antaal";
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
             // 
             // total
             // 
@@ -110,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 365);
+            this.ClientSize = new System.Drawing.Size(706, 365);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.betalenButton);
             this.Controls.Add(this.dataGridView1);
@@ -127,8 +120,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Naam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supliesName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn antaal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewTextBoxColumn betaald;
     }

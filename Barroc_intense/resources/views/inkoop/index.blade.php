@@ -31,7 +31,7 @@
                                     <th scope="col">Prijs</th>
                                     <th scope="col">Voorraad</th>
                                     <th scope="col">Beschikbaar</th>
-                                    <th scope="col">Toevoegen </th>
+                                    <th scope="col">Toevoegen</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -39,33 +39,35 @@
                                 @foreach($products as $product)
                                     <tr>
                                         <th scope="row">{{$product->id}}</th>
-                                        <form action="{{route('orders.store', ['product' => $product->id])}}" method="post">
+                                        <form action="{{route('orders.store', ['product' => $product->id])}}"
+                                              method="post">
                                             @csrf
 
-                                                <td>
-                                                    <a href="{{route('inkoop.edit', $product->id)}}">{{$product->name}}</a>
-                                                </td>
-                                                <td>{{$product->price}}</td>
-                                                <td>{{$product->units}}</td>
-                                                <td>
-                                                    @if($product->available === 1)
-                                                        <p class="text-success">beschikbaar</p>
-                                                    @else
-                                                        <p class="text-danger">niet beschikbaar</p>
-                                                    @endif
-                                                </td>
+                                            <td>
+                                                <a href="{{route('inkoop.edit', $product->id)}}">{{$product->name}}</a>
+                                            </td>
+                                            <td>{{$product->price}}</td>
+                                            <td>{{$product->units}}</td>
+                                            <td>
+                                                @if($product->available === 1)
+                                                    <p class="text-success">beschikbaar</p>
+                                                @else
+                                                    <p class="text-danger">niet beschikbaar</p>
+                                                @endif
+                                            </td>
 
-                                                <td>
-                                                    <input type="hidden" name="product" value="{{$product->id}}">
-                                                    <input class="btn btn-secondary" type="submit" value="+">
-                                                </td>
+                                            <td>
+                                                <input type="hidden" name="product" value="{{$product->id}}">
+                                                <input class="btn btn-secondary" type="submit" value="+">
+                                            </td>
 
-                                            
+
                                         </form>
                                     </tr>
                                 @endforeach
                                 </tbody>
-                                <a class="btn btn-primary" href="{{route('orders.index')}}">ga naar de bestelde producten</a>
+                                <a class="btn btn-primary" href="{{route('orders.index')}}">ga naar de bestelde
+                                    producten</a>
                             </table>
 
 
