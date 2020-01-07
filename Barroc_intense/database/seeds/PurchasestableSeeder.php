@@ -18,8 +18,8 @@ class PurchasestableSeeder extends Seeder
             for($i = 0; $i < $faker->numberBetween(1, 20); $i++) {
                 \DB::table('purchases')->insert([
                     'user_id'       => $user->id,
-                    'created_at'    => $faker->dateTime,
-                    'updated_at'    => $faker->dateTime
+                    'created_at'    => now(),
+                    'updated_at'    => now()
                 ]);
             }
         }

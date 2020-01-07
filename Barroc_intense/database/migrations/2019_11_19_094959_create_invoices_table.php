@@ -18,7 +18,7 @@ class CreateInvoicesTable extends Migration
             $table->unsignedBigInteger('lease_id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('supply_id');
-            $table->integer('antaal');
+            $table->integer('aantal');
             $table->decimal('total');
             $table->date('betaald_op')->nullable();
 //            $table->dateTime('created_at');
