@@ -7,14 +7,30 @@
                 <div class="card-header" style="background-color:#ffbf00" >Persoonlijke informatie</div>
                 <div class="card-body row" style="">
 
-                    <p>Naam: {{$user->name}}</p>
-                    <p>Email {{$user->email}}</p>
-                    <ul class="list-group" style="max-height:300px; overflow-y: scroll;">
-                    @foreach()
-                        <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="{{route('maintenance.edit', )}}" class="text-white">Storing</a></li>
-                    @endforeach
-                    </ul>
-                    <a href="{{route('maintenance.create', )}}" class="text-white">Storing</a>
+                    <div class="info">
+                        <p>Naam: {{$user->name}}</p>
+                        <p>Email: {{$user->email}}</p>
+                        <div>
+                            <a href="{{route('maintenance.create')}}" style="margin: 5px; background-color: #343a40" class="btn text-white btn-dark">Storing</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <ul class="list-group align-content-md-end" style="max-height:300px; overflow-y: scroll;">
+
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="" class="text-white">Factuur</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="" class="text-white">Factuur</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="" class="text-white">Factuur</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="" class="text-white">Factuur</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="" class="text-white">Factuur</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="" class="text-white">Factuur</a></li>
+                            <li class="list-group-item list-group-item-dark" style="margin: 5px; background-color: #343a40"><a href="" class="text-white">Factuur</a></li>
+
+                        </ul>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>

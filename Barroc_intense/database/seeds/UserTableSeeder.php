@@ -73,14 +73,14 @@ class UserTableSeeder extends Seeder
             ]
         ]);
 
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 150; $i++) {
             \App\User::insert([
                 'email'         => $faker->safeEmail,
                 'name'          => $faker->name,
                 'password'      => Hash::make('barroc123'),
                 'role_id'       => $faker->numberBetween(2, 7),
-                'created_at'    => $faker->dateTime,
-                'updated_at'    => $faker->dateTime
+                'created_at'    => now(),
+                'updated_at'    => now()
             ]);
         }
     }

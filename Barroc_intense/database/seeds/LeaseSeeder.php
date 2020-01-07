@@ -16,7 +16,7 @@ class LeaseSeeder extends Seeder
         $finances = \App\User::where('role_id', 3)->get();
 
         foreach($customers as $user) {
-            for($i = 0; $i < $faker->numberBetween(1, 3); $i++) {
+            for($i = 0; $i < $faker->numberBetween(2, 3); $i++) {
                 \DB::table('leases')->insert([
                     'lease_type_id' => $faker->numberBetween(1, 2),
                     'customer_id'   => $user->id,
@@ -24,8 +24,8 @@ class LeaseSeeder extends Seeder
                     'monthly_costs' => $faker->randomFloat(2, 1000, 1000000),
                     'start_date'    => $faker->dateTimeBetween('-10 years', 'now'),
                     'end_date'      => $faker->dateTimeBetween('now', '+10 years'),
-                    'created_at'    => $faker->dateTime,
-                    'updated_at'    => $faker->dateTime
+                    'created_at'    =>now(),
+                    'updated_at'    =>now()
                 ]);
             }
         }

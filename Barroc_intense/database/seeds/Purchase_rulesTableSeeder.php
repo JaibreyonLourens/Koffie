@@ -15,12 +15,12 @@ class Purchase_rulesTableSeeder extends Seeder
         $purchases = \App\Purchase::all();
 
         foreach($purchases as $p) {
-            for($i = 0; $i < $faker->numberBetween(1, 5); $i++) {
+            for($i = 0; $i < $faker->numberBetween(10, 30); $i++) {
                 \DB::table('purchases_rules')->insert([
                     'purchase_id'   => $p->id,
                     'supply_id'     => $faker->numberBetween(1, 8),
-                    'created_at'    => $faker->dateTime,
-                    'updated_at'    => $faker->dateTime
+                    'created_at'    => now(),
+                    'updated_at'    => now()
                 ]);
             }
         }

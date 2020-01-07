@@ -17,14 +17,14 @@ class Lease_rulesSeeder extends Seeder
 
         foreach($leases as $lease)
         {
-            for($i = 0; $i < $faker->numberBetween(1, 5); $i++)
+            for($i = 0; $i < 150; $i++)
             {
                 \DB::table('lease_rules')->insert([
                     [
                         'lease_id'  => $lease->id,
                         'supply_id' => $supplies->random()->id,
-                        'created_at'    => $faker->dateTime,
-                        'updated_at'    => $faker->dateTime
+                        'created_at'    => now(),
+                        'updated_at'    => now()
                     ]
                 ]);
 

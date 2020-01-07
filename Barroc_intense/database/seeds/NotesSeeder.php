@@ -16,14 +16,14 @@ class NotesSeeder extends Seeder
         $sales = \App\User::where('role_id', 2)->get();
 
         foreach($customers as $user) {
-            for($i = 0; $i < $faker->numberBetween(0, 3); $i++) {
+            for($i = 0; $i < $faker->numberBetween(10, 20); $i++) {
                 \DB::table('notes')->insert([
                     [
                         'sales_id'      => 3,
                         'customer_id'   => $sales->random()->id,
                         'content'       => $faker->text,
-                        'created_at'    => $faker->dateTime,
-                        'updated_at'    => $faker->dateTime
+                        'created_at'    => now(),
+                        'updated_at'    => now()
                     ]
                 ]);
             }

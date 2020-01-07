@@ -22,7 +22,7 @@ class inkoopController extends Controller
         $btn = $_POST['submitbtn'];
         if($btn == "clear"){
             $products = Supplies::all();
-            return view('supplies.index', [ 'products' => $products]);
+            return view('inkoop.index', [ 'products' => $products]);
         }
 
         $name = $request->input('name');

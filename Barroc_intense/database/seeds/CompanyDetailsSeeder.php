@@ -23,8 +23,8 @@ class CompanyDetailsSeeder extends Seeder
                 'postcode'      => $faker->postcode,
                 'email'         => $faker->safeEmail,
                 'telefoonnummer'=> $faker->phoneNumber,
-                'created_at'    => $faker->dateTime,
-                'updated_at'    => $faker->dateTime
+                'created_at'    => now(),
+                'updated_at'    => now()
             ]);
         }
     }
