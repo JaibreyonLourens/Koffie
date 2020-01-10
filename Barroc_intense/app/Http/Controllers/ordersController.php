@@ -49,8 +49,9 @@ class ordersController extends Controller
 
         }
       $total = $price;
-           // DD($total);
+
         return view('Orders/index', ['user' => $user,
+                                           'orders' => $orders,
                                            'total' => $total,
                                            'supplies' => $supplies]);
     }
@@ -117,7 +118,18 @@ class ordersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+
+        $userid = \Auth::id();
+        $user = \App\User::with('orders', 'orders.supply')->find($userid);
+        $orders =\App\Order::find($id);
+        $supplies = \App\Supplies::all();
+
+       $orders->update([
+           'is_completed' => 1
+       ]);
+
+        return view('inkoop.index', ['products' => $supplies]);
     }
 
     /**

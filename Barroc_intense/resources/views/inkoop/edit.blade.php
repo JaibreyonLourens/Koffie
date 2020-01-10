@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
     <h1>Edit Product</h1>
-    <form action="{{ route('customer.update', $user->id) }}" method="POST">
+    <form action="{{ route('inkoop.update', $user->id) }}" method="POST">
         @method('PUT')
         @csrf
         <div class="form-group">
             <label for="">name</label>
-            <input name="name" type="text" value="{{$user->name}}">
+            <input name="name" type="text" value="{{$supplies->name}}">
         </div>
 
         <div class="form-group">

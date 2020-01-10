@@ -46,6 +46,7 @@ class inkoopController extends Controller
     public function index()
     {
 
+
         $products = Supplies::all();
         return view('inkoop/index', ['products' => $products]);
     }

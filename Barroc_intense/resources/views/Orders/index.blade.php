@@ -7,9 +7,11 @@
                     <div id="home-card" class="card">
                         <div class="card-body">
                             <div class="card-body">
-                                <form action="{{route('orders.order', ['supplies' => $supplies] )}}" method="post">
+                                @foreach($orders as $orderid)
+                                <form action="{{route('orders.update', $orderid->id)}}" method="POST">
+                                @endforeach
+                                    @method('put')
                                     @csrf
-
 
                                     @foreach($user->orders as $order)
                                         @foreach($supplies as $supply)
@@ -35,12 +37,13 @@
                                     <p>Total: {{$total}}</p>
 
                                     <div class="form-group">
-                                        <input type="hidden" name="supplyid" value="{{$supply->id}}">
+
                                         <input type="submit" value="Bestel producten">
                                     </div>
 
 
                                 </form>
+
                             </div>
 
                         </div>

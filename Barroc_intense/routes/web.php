@@ -26,6 +26,7 @@ Route::resource('products', 'productsController');
 Route::resource('customer', 'customerController')->middleware('auth', 'role:7');
 Route::resource('supplies', 'SuppliesController');
 Route::resource('inkoop', 'inkoopController')->middleware('auth', 'role:6');
+Route::match(['put', 'patch'], 'orders.update/{request}', 'ordersController@update');
 Route::resource('offerte', 'offerteController');
 Route::resource('orders', 'ordersController');
 Route::get('/home', 'HomeController@index')->name('home');
