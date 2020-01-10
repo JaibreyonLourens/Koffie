@@ -8,10 +8,10 @@
                     <div class="card-body " style="">
                         <div class="">
                             <form action="{{route('maintenance.update', $workorder->id)}}" method="post" class="border border-light p-5">
-                                @method('PUT')s
+                                @method('PUT')
                                 @csrf
 
-                                <p>{{$workorder}}</p>
+                                
                                 <label for="select">Gebruikte producten</label>
                                 <select class="browser-default custom-select mb-4" id="select">
 
