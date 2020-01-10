@@ -40,6 +40,7 @@ namespace Barroc_Intense
                 nameComboBox.ValueMember = "id";
                 nameComboBox.DataSource = ds.Tables["users"];
 
+
                
 
                 //CalculatePrice(Convert.ToInt32(productComboBox.SelectedValue), Convert.ToInt32(numericUpDown1.Value));
@@ -86,6 +87,8 @@ namespace Barroc_Intense
                 cmd.ExecuteNonQuery();
                 //Form Factuur_Anmaken = new Factuur_Anmaken();
                 //Factuur_Anmaken.Show();
+
+                MessageBox.Show("U heeft fatuur gemaakt");
             }
             catch (Exception ex)
             {

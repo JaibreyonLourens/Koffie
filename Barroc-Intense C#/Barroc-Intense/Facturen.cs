@@ -107,6 +107,7 @@ namespace Barroc_Intense
                 cmd.Parameters.AddWithValue("@id", id);
                 //cmd.Parameters.AddWithValue("@betaald_op", "01/01/2019");
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("U heeft fatuur gebetaald");
 
             }
             catch (Exception ex)
